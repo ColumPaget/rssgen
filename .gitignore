@@ -1,0 +1,7 @@
+*.exe
+*.o
+*.a
+*.so
+*.sa
+config.*
+autom4te.cache

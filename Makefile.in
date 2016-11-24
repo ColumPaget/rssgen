@@ -1,0 +1,27 @@
+CC = @CC@
+VERSION = @VERSION@
+CFLAGS = @CFLAGS@
+LIBS = @LIBS@
+FLAGS=$(CFLAGS) @DEFS@
+INSTALL=@INSTALL@
+prefix=@prefix@
+bindir=$(prefix)@bindir@
+mandir=@mandir@/man1
+
+all:
+	@cd libUseful-2.6; $(MAKE)
+	$(CC) $(FLAGS) $(LIBS) -g -orssgen main.c libUseful-2.6/libUseful-2.6.a
+
+clean:
+	@rm -f rssgen libUseful-2.6/*.o libUseful-2.6/*.a libUseful-2.6/*.so
+
+distclean:
+	@rm -f rssgen libUseful-2.6/*.o libUseful-2.6/*.a libUseful-2.6/*.so Makefile config.*
+
+
+install:
+	mkdir -p $(DESTDIR)$(bindir)
+	$(INSTALL) rssgen $(DESTDIR)$(bindir)
+	mkdir -p $(DESTDIR)$(mandir)
+	$(INSTALL) rssgen.1 $(DESTDIR)$(mandir)
+
