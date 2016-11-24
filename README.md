@@ -33,19 +33,19 @@ After unpacking the tarball do the usual "./configure; make; make install"
 
 SYNTAX
 ------
-	rssgen <base url> -b [ -o <path> ] [ -t <title> ] [ -s <self url> ] [ -x <exclude pattern> ] <input file> ...
+	`rssgen <base url> -b [ -o <path> ] [ -t <title> ] [ -s <self url> ] [ -x <exclude pattern> ] <input file> ...`
 
 <base url>		The path that the items in the rss file will appear at. So, if building an rss for files under "http://myblog.com/blogposts/" the base url is "http://myblog.com/blogposts/"
 
 **-b** Strip any leading path off input file names
 
-**-o <path>** Path to RSS output file. Defaults to `./feed.rss`
+**-o [path]** Path to RSS output file. Defaults to `./feed.rss`
 
-**-t <title>** Title of RSS Channel
+**-t [title]** Title of RSS Channel
 
-**-s <self url>** Optional "self" url for this RSS Channel
+**-s [self url]** Optional "self" url for this RSS Channel
 
-**-x <exclude pattern>** Don't include files matching this pattern
+**-x [exclude pattern]** Don't include files matching this pattern
 
 
 The first argument to rssgen must be the base URL where the documents will be stored. Thus this command
