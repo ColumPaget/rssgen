@@ -39,7 +39,7 @@ SYNTAX
 
 **-b** Strip any leading path off input file names
 
-**-o <path>** Path to RSS output file. Defaults to "./feed.rss"
+**-o <path>** Path to RSS output file. Defaults to `./feed.rss`
 
 **-t <title>** Title of RSS Channel
 
